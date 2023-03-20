@@ -36,7 +36,7 @@ const App = () => {
         <button>Submit</button>
       </form>
       
-      {dishes.map(dish => (
+    {dishes.map(dish => (
         <article className="dish-card dish-card--withImage">
           <h3>{dish.name}</h3>
           <p>{dish.desc}</p>
