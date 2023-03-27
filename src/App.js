@@ -11,6 +11,7 @@ const App = () => {
   const fetchDishes = async () => {
     const res = await fetch(API_URL);
     const data = await res.json();
+    console.log(`data`, data);
     setDishes(data);
   }
   
@@ -37,12 +38,12 @@ const App = () => {
       </form>
       
     {dishes.map(dish => (
-        <article className="dish-card dish-card--withImage">
+        <article className="dish-card dish-card--withImage" key={name}>
           <h3>{dish.name}</h3>
           <p>{dish.desc}</p>
           <div className="ingredients">
             {dish.ingredients.map(ingredient => (
-              <span>{ingredient}</span>
+              <span key={ingredient}>{ingredient}</span>
             ))}
           </div>
         </article>
