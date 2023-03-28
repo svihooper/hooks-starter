@@ -38,7 +38,7 @@ const App = () => {
       </form>
       
     {dishes.map(dish => (
-        <article className="dish-card dish-card--withImage" key={name}>
+        <article className="dish-card dish-card--withImage" key={dish.name}>
           <h3>{dish.name}</h3>
           <p>{dish.desc}</p>
           <div className="ingredients">
